@@ -54,6 +54,7 @@ class _EmployeeListScreenState extends State<EmployeeListScreen> {
             MaterialPageRoute(
               builder: (context) => AddEmployeeScreen(
                 onAddEmployee: addEmployee,
+                // ignore: avoid_types_as_parameter_names
                 onEditEmployee: (Employee) {
                   setState(() {});
                 },
@@ -83,10 +84,10 @@ class _EmployeeListScreenState extends State<EmployeeListScreen> {
             });
           },
           initialEmployee: employees[index],
-          onAddEmployee: (Employee) {
+          onAddEmployee: (employee) {
             setState(() {
               setState(() {
-                employees.add(Employee);
+                employees.add(employee);
               });
             });
           },
