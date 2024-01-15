@@ -14,35 +14,34 @@ class _EmployeeListScreenState extends State<EmployeeListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Employee List'),
+        title: const Text('Data List'),
       ),
       body: employees.isEmpty
-          ? const Center(child: Text('No Employees added yet.'))
+          ? const Center(child: Text('No Data added yet.'))
           : ListView.builder(
+              padding: const EdgeInsets.all(10),
               itemCount: employees.length,
               itemBuilder: (context, index) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Card(
-                      child: ListTile(
-                    title: Text("Name:- ${employees[index].name}"),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Mail:- ${employees[index].email}"),
-                        Text("Contact:- ${employees[index].phoneNumber}"),
-                      ],
-                    ),
-                    trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-                      IconButton(
-                          icon: const Icon(Icons.edit),
-                          onPressed: () => editEmployee(index)),
-                      IconButton(
-                          icon: const Icon(Icons.delete),
-                          onPressed: () => deleteEmployee(index))
-                    ]),
-                  )),
-                );
+                return Card(
+                    color: Colors.cyan.shade50,
+                    child: ListTile(
+                      title: Text("Name:- ${employees[index].name}"),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Mail:- ${employees[index].email}"),
+                          Text("Contact:- ${employees[index].phoneNumber}"),
+                        ],
+                      ),
+                      trailing: Row(mainAxisSize: MainAxisSize.min, children: [
+                        IconButton(
+                            icon: const Icon(Icons.edit),
+                            onPressed: () => editEmployee(index)),
+                        IconButton(
+                            icon: const Icon(Icons.delete),
+                            onPressed: () => deleteEmployee(index))
+                      ]),
+                    ));
               },
             ),
       floatingActionButton: FloatingActionButton(

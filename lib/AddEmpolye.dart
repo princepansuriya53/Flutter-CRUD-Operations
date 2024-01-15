@@ -36,8 +36,7 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-            widget.initialEmployee != null ? 'Edit Employee' : 'Add Employee'),
+        title: Text(widget.initialEmployee != null ? 'Edit Data' : 'Add Data'),
       ),
       body: Column(
         children: [
