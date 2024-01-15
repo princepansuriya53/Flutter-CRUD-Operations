@@ -3,9 +3,6 @@ class Employee {
   String email;
   String phoneNumber;
 
-  Employee({
-    required this.name,
-    required this.email,
-    required this.phoneNumber,
-  });
+  Employee(
+      {required this.name, required this.email, required this.phoneNumber});
 }
