@@ -105,9 +105,7 @@ class _EmployeeListScreenState extends State<EmployeeListScreen> {
           content: const Text('Are you sure you want to delete this employee?'),
           actions: [
             TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
+              onPressed: () => Navigator.pop(context),
               child: const Text('Cancel'),
             ),
             TextButton(

@@ -112,7 +112,7 @@ class _AddEmployeeScreenState extends State<AddEmployeeScreen> {
     } else {
       // Show a snackbar or some feedback for incomplete data
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
+        const SnackBar(
           content: Text('Please fill in all fields.'),
         ),
       );
