@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-## Getting Started
+## In this project, I showed how to create, insert, update, and delete in Flutte.
 
 This project is a starting point for a Flutter application.
 
